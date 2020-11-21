@@ -115,9 +115,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         if (clockwise) {
-            tap_code(KC_PGDN);
+            //tap_code(KC_PGDN);
+            SEND_STRING(SS_DOWN(X_RCTRL) SS_TAP(X_RIGHT) SS_UP(X_RCTRL));
         } else {
-            tap_code(KC_PGUP);
+            //tap_code(KC_PGUP);
+            SEND_STRING(SS_DOWN(X_RCTRL) SS_TAP(X_LEFT) SS_UP(X_RCTRL));
         }
     }
     else if (index == 1) { // DOESNT APPLY, right encoder not installed

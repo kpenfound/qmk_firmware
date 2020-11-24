@@ -2,7 +2,7 @@
 
 Instructions found here: https://docs.keeb.io/iris-rev3-build-guide/
 
-Prep switches.  These are Sakurios from zealpc.net
+Prep switches.  These are 62g Sakurio for alphanumeric and 67g Tealio V2 from zealpc.net
 
 ![prep switches](https://kpenfound-photo.s3.amazonaws.com/PXL_20201120_194631956.jpg)
 

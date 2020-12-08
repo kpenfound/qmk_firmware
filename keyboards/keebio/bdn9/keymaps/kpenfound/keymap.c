@@ -29,9 +29,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         | Left              | Down | Right              |
      */
     [0] = LAYOUT(
-        KC_7, KC_8, KC_9,
-        KC_4  , KC_5  , KC_6,
-        KC_1, KC_2, KC_3
+        KC_MUTE, KC_P8, KC_P9,
+        KC_P4  , KC_P5  , KC_P6,
+        KC_P1, KC_P2, KC_P3
     ),
     /*
         | RESET          | N/A  | Media Stop |
@@ -40,10 +40,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [1] = LAYOUT(
         _______  , _______, _______,
-        _______, KC_HOME, _______,
+        _______, _______, _______,
         _______, _______ , _______
     ),
 };
 
 void encoder_update_user(uint8_t index, bool clockwise) {
+    if (index == _LEFT) {
+        if (clockwise) {
+            tap_code(KC_VOLU);
+        } else {
+            tap_code(KC_VOLD);
+        }
+    }
 }

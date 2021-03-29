@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |----------------------------------------------------------------|
    * |Shift   |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|Shift | Up|End |
    * |----------------------------------------------------------------|
-   * |Ctrl|Win |Alt | space     |~ `| fn    |Alt| FN|    |Lef|Dow|Rig |
+   * |Ctrl|Win |Alt | space     | space | fn    |Alt| FN|    |Lef|Dow|Rig |
    * `----------------------------------------------------------------'
    */
 [0] = LAYOUT_65_ansi_split_space(
@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  KC_Q,    KC_W,   KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS, KC_HOME,
   KC_LCTL, KC_A,    KC_S,   KC_D,   KC_F,   KC_G,   KC_H,   KC_J,   KC_K,    KC_L,    KC_SCLN, KC_QUOT,          KC_ENT, KC_PGUP,
   KC_LSFT, KC_Z,    KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,           KC_UP, KC_PGDN,
-  KC_LCTL, KC_LGUI, KC_LALT,    KC_SPC,        KC_GRV,        MO(1),       KC_RALT,     MO(1),           KC_LEFT, KC_DOWN, KC_RGHT   ),
+  KC_LCTL, KC_LGUI, KC_LALT,    KC_SPC,        KC_SPC,        MO(1),       KC_RALT,     MO(1),   _______,KC_LEFT, KC_DOWN, KC_RGHT   ),
 
   /* Keymap Fn Layer
    * ,----------------------------------------------------------------.
@@ -54,6 +54,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    _______,_______,  KC_UP,_______,_______,_______,_______,_______,KC_PSCR,KC_SLCK,KC_PAUS,  KC_UP,_______,     _______,_______,
    _______,KC_LEFT,KC_DOWN,KC_RGHT,_______,_______,_______,_______,KC_HOME,KC_PGUP,KC_LEFT,KC_RGHT,            _______,_______,
    _______,_______,_______,_______,_______,_______,_______,_______, KC_END,KC_PGDN,KC_DOWN,       _______,KC_PGUP,_______,
-   _______,  _______,  _______,_______,            _______, _______,  _______,_______            ,KC_HOME,KC_PGDN, KC_END),
+   _______,  _______,  _______,_______,            _______, _______,  _______,_______,_______, KC_HOME, KC_PGDN, KC_END),
 
 };
